@@ -39,14 +39,14 @@
                     <i class="fa fa-bars"></i>
                 </button>
             </div>
-            <div class="header-block header-block-search hidden-sm-down">
-                <form role="search">
-                    <div class="input-container"><i class="fa fa-search"></i> <input type="search" placeholder="Search">
+            <%--<div class="header-block header-block-search hidden-sm-down">--%>
+                <%--<form role="search">--%>
+                    <%--<div class="input-container"><i class="fa fa-search"></i> <input type="search" placeholder="Search">--%>
 
-                        <div class="underline"></div>
-                    </div>
-                </form>
-            </div>
+                        <%--<div class="underline"></div>--%>
+                    <%--</div>--%>
+                <%--</form>--%>
+            <%--</div>--%>
             <div class="header-block header-block-nav">
                 <ul class="nav-profile">
                     <li class="notifications new"><a href="" data-toggle="dropdown">
@@ -142,7 +142,7 @@
                 </div>
                 <nav class="menu">
                     <ul class="nav metismenu" id="sidebar-menu">
-                        <li class="active"><a href="index.html">
+                        <li class="active"><a href="/home">
                             <i class="fa fa-home"></i> Dashboard
                         </a></li>
                         <li><a href="">
