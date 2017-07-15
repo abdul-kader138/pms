@@ -8,25 +8,23 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title> ModularAdmin - Free Dashboard Theme | HTML Version </title>
+    <title> Project Monitor </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="resources/node_modules/modular_admin/css/vendor.css">
-    <link rel="stylesheet" href="resources/node_modules/modular_admin/css/app.css">
+    <link rel="stylesheet" type="text/css" href="resources/node_modules/datatable/jquery.dataTables.min.css">
+    <script src="resources/node_modules/datatable/jquery.js"></script>
     <!-- Theme initialization -->
     <script>
         var themeSettings = (localStorage.getItem('themeSettings')) ? JSON.parse(localStorage.getItem('themeSettings')) :
         {};
         var themeName = themeSettings.themeName || '';
         if (themeName) {
-            console.log(themeName);
-            console.log('<link rel="stylesheet" id="theme-style" href="resources/node_modules/modular_admin/css/app-' + themeName + '.css">');
-            document.write('<link rel="stylesheet" id="theme-style" href="resources/node_modules/modular_admin/css/app-' + themeName + '.css">');
+            document.write('<link rel="stylesheet" id="theme-style" href="/resources/node_modules/modular_admin/css/app-' + themeName + '.css">');
         }
         else {
-            console.log('<link rel="stylesheet" id="theme-style" href="/resources/node_modules/modular_admin/css/app.css">');
             document.write('<link rel="stylesheet" id="theme-style" href="/resources/node_modules/modular_admin/css/app.css">');
         }
     </script>
@@ -49,19 +47,6 @@
                     </div>
                 </form>
             </div>
-            <div class="header-block header-block-buttons"><a href="https://github.com/modularcode/modular-admin-html"
-                                                              class="btn btn-sm header-btn">
-                <i class="fa fa-github-alt"></i>
-                <span>View on GitHub</span>
-            </a> <a href="https://github.com/modularcode/modular-admin-html/stargazers" class="btn btn-sm header-btn">
-                <i class="fa fa-star"></i>
-                <span>Star Us</span>
-            </a>
-                <a href="https://github.com/modularcode/modular-admin-html/releases/download/v1.1.1/modular-admin-html-1.1.1.zip"
-                   class="btn btn-sm header-btn">
-                    <i class="fa fa-cloud-download"></i>
-                    <span>Download .zip</span>
-                </a></div>
             <div class="header-block header-block-nav">
                 <ul class="nav-profile">
                     <li class="notifications new"><a href="" data-toggle="dropdown">
@@ -165,8 +150,8 @@
                             <i class="fa arrow"></i>
                         </a>
                             <ul>
-                                <li><a href="items-list.html">
-                                    Items List
+                                <li><a href="/company">
+                                   Customer Setup
                                 </a></li>
                                 <li><a href="item-editor.html">
                                     Item Editor
