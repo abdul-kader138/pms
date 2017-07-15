@@ -1,0 +1,135 @@
+// run this script to create  user to login the application
+
+
+1) insert to Company table
+
+INSERT INTO company(
+            id, address, created_by,image_path, name,version,client_id)
+    VALUES (9999999993, 'Dhaka', 'admin@domain.com', '/resources/images/company_logo/default.jpg','Test Company', 0,'PG');
+
+
+2) Insert to roles table
+
+INSERT INTO roles(
+            id, created_by, description, name,version,client_id)
+    VALUES (9999999991, 'admin@domain.com', 'ROLE_SUPER_ADMIN', 'ROLE_SUPER_ADMIN',0,'PG');
+
+
+3) Insert to role_rights table
+
+INSERT INTO role_right(
+            id, created_by,role_id,version, role_name,client_id)
+    VALUES (9999999992, 'admin@domain.com', 9999999991,0, 'ROLE_SUPER_ADMIN','PG');
+
+4) Insert into rights table
+
+   INSERT INTO rights(id, rights) VALUES (9999999992, 'View');
+   INSERT INTO rights(id, rights) VALUES (9999999992, 'Write');
+   INSERT INTO rights(id, rights) VALUES (9999999992, 'Edit');
+   INSERT INTO rights(id, rights) VALUES (9999999992, 'Delete');
+
+
+5) Insert into users table
+
+INSERT INTO users(
+            id,  email, name, password, phone, role, version,image_path,designation,role_right,role_rights_id,company_id,company,user_type,client_id)
+    VALUES (9999999999,'admin@domain.com', 'Admin User','$2a$10$8ftimfEd8fCvG/cxprK80.1ksGmcMKqCiYAv5doFz5hIipMwn3u16','09876543211', 'ROLE_SUPER_ADMIN',0,'/resources/images/user_photo/user.png','SD',9999999992,9999999992,9999999993,9999999993,'vendor','PG');
+
+
+
+
+
+
+6) then enter below info and login to the system
+
+Email-admin@domain.com
+password-12345678
+
+
+
+
+
+
+// insert user roles to roles table
+
+
+1) Insert to roles table
+
+INSERT INTO roles(
+            id, created_by, description, name,version,client_id)
+    VALUES (9999999994, 'admin@domain.com', 'ROLE_USER', 'ROLE_USER',0,'PG');
+
+2) Insert to role_rights table
+
+INSERT INTO role_right(
+            id, created_by,role_id,version, role_name,client_id)
+    VALUES (9999999995, 'admin@domain.com', 9999999994,0, 'ROLE_USER','PG');
+
+
+3) Insert into rights table
+   INSERT INTO rights(id, rights) VALUES (9999999995, 'View');
+   INSERT INTO rights(id, rights) VALUES (9999999995, 'Write');
+
+
+
+// insert user roles to roles table
+
+
+1) Insert to roles table
+
+INSERT INTO roles(
+            id, created_by, description, name,version,client_id)
+    VALUES (9999999981, 'admin@domain.com', 'ROLE_ADMIN', 'ROLE_ADMIN',0,'PG');
+
+2) Insert to role_rights table
+
+INSERT INTO role_right(
+            id, created_by,role_id,version, role_name,client_id)
+    VALUES (9999999982, 'admin@domain.com', 9999999981,0, 'ROLE_ADMIN','PG');
+
+
+3) Insert into rights table
+   INSERT INTO rights(id, rights) VALUES (9999999982, 'View');
+   INSERT INTO rights(id, rights) VALUES (9999999982, 'Write');
+   INSERT INTO rights(id, rights) VALUES (9999999982, 'Edit');
+
+
+4) INSERT INTO company(
+               id, address, created_by,image_path, name,version,client_id)
+       VALUES (9999999989, 'Dhaka', 'admin@domain.com', '/resources/images/company_logo/default1.jpg','Test-2', 0,'TEST-001');
+
+   // Create for team member
+
+ 5)  INSERT INTO users(
+               id,  email, name, password, phone, role, version,image_path,designation,role_right,role_rights_id,company_id,company,user_type,client_id)
+       VALUES (9999999998,'admin@client.com', 'Admin User','$2a$10$8ftimfEd8fCvG/cxprK80.1ksGmcMKqCiYAv5doFz5hIipMwn3u16','09876543211', 'ROLE_ADMIN',0,'/resources/images/team_member_photo/client.png','SD',9999999982,9999999982,9999999989,9999999989,'client','TEST-001');
+
+    Email-admin@client.com
+    password-12345678
+
+
+    i.e
+       1) after creating a valid company both user(Client/Vendor) company need to change.
+         For client side company update need to run manual query(company id,company Name,client_id at users table).
+
+       2) Need to set client_id value based on client at both place xml and sql inset.
+
+
+// Create for Developer
+
+INSERT INTO users(
+               id,  email, name, password, phone, role, version,image_path,designation,role_right,role_rights_id,company_id,company,user_type,client_id)
+       VALUES (9999999900,'test@dev.com', 'User','$2a$10$8ftimfEd8fCvG/cxprK80.1ksGmcMKqCiYAv5doFz5hIipMwn3u16','09876543211', 'ROLE_USER',0,'/resources/images/team_member_photo/developer.png','Developer',9999999982,9999999982,9999999989,9999999989,'developer','TEST-001');
+
+
+// Other client
+
+
+INSERT INTO company(
+               id, address, created_by,image_path, name,version,client_id)
+       VALUES (9999999966, 'Dhaka', 'admin@domain.com', '/resources/images/company_logo/default2.jpg','Test-3', 0,'AKB');
+
+
+ INSERT INTO users(
+               id,  email, name, password, phone, role, version,image_path,designation,role_right,role_rights_id,company_id,company,user_type,client_id)
+       VALUES (9999999967,'admin@client1.com', 'Admin User','$2a$10$8ftimfEd8fCvG/cxprK80.1ksGmcMKqCiYAv5doFz5hIipMwn3u16','09876543211', 'ROLE_ADMIN',0,'/resources/images/team_member_photo/client2.png','SD',9999999982,9999999982,9999999966,9999999966,'client','AKB');
