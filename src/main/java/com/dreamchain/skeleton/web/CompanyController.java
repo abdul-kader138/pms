@@ -44,6 +44,15 @@ public class CompanyController {
 
     }
 
+    @RequestMapping("/add_company")
+    public ModelAndView addCompanyView()  {
+        ModelAndView model = new ModelAndView();
+        String pageName = "add_company";
+        model.setViewName(pageName);
+        return model;
+
+    }
+
     @RequestMapping(value = "company/companyList", method = RequestMethod.GET)
     public
     @ResponseBody

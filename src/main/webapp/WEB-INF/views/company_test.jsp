@@ -5,7 +5,7 @@
         <div class="title-block">
             <div class="row">
                 <div class="col-md-6">
-                    <h3 class="title"> Items <a href="item-editor.html" class="btn btn-primary btn-sm rounded-s">
+                    <h3 class="title"> Items <a href="/add_company" class="btn btn-primary btn-sm rounded-s">
                         Add New
                     </a>
                     </h3>

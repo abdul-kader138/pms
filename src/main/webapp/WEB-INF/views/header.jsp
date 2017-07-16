@@ -15,6 +15,7 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="resources/node_modules/modular_admin/css/vendor.css">
     <link rel="stylesheet" type="text/css" href="resources/node_modules/datatable/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="resources/node_modules/custom-css/app.css">
     <script src="resources/node_modules/datatable/jquery.js"></script>
     <!-- Theme initialization -->
     <script>
